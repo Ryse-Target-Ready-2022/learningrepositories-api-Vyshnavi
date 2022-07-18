@@ -1,20 +1,35 @@
 package com.tgt.rysetii.entity;
 
-import java.time.LocalDate;
+import org.springframework.stereotype.Component;
 
+import javax.persistence.*;
+import java.time.LocalDate;
+@Component
+@Entity
+@Table(name="LEARNING_RESOURCE")
 public class LearningResource {
-    private double id;
+    @Id
+    @Column(name="ID")
+    private Integer id;
+    @Column(name="NAME")
     private String name;
+    @Column(name="COST_PRICE")
     private double costPrice;
+    @Column(name="SELLING_PRICE")
     private double sellingPrice;
+    @Column(name="LEARNING_RESOURCE_STATUS")
+    @Enumerated(EnumType.STRING)
     private LearningResourceStatus learningResourceStatus;
+    @Column(name="CREATED_DATE")
     private LocalDate createdDate;
+    @Column(name="PUBLISHED_DATE")
     private LocalDate publishedDate;
+    @Column(name="RETIRED_DATE")
     private LocalDate retiredDate;
 
     public LearningResource(){}
 
-    public LearningResource(double id, String name, double costPrice, double sellingPrice, LearningResourceStatus learningResourceStatus, LocalDate createdDate, LocalDate publishedDate, LocalDate retiredDate) {
+    public LearningResource(Integer id, String name, double costPrice, double sellingPrice, LearningResourceStatus learningResourceStatus, LocalDate createdDate, LocalDate publishedDate, LocalDate retiredDate) {
         this.id = id;
         this.name = name;
         this.costPrice = costPrice;
@@ -25,11 +40,11 @@ public class LearningResource {
         this.retiredDate = retiredDate;
     }
 
-    public double getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(double id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -87,5 +102,19 @@ public class LearningResource {
 
     public void setRetiredDate(LocalDate retiredDate) {
         this.retiredDate = retiredDate;
+    }
+
+    @Override
+    public String toString() {
+        return "LearningResource{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", costPrice=" + costPrice +
+                ", sellingPrice=" + sellingPrice +
+                ", learningResourceStatus=" + learningResourceStatus +
+                ", createdDate=" + createdDate +
+                ", publishedDate=" + publishedDate +
+                ", retiredDate=" + retiredDate +
+                '}';
     }
 }
