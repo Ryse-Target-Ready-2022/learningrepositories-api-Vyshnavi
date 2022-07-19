@@ -2,13 +2,12 @@ package com.tgt.rysetii.service;
 
 import com.tgt.rysetii.entity.LearningResource;
 import com.tgt.rysetii.repository.LearningResourceRepository;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 import static java.util.stream.Collectors.toList;
-@Component
 @Service
 public class LearningResourceService {
 
@@ -18,7 +17,7 @@ public class LearningResourceService {
     {this.learningResourceRepository=learningResourceRepository;}
 
 
-    private List<LearningResource> getLearningResources()
+    public List<LearningResource> getLearningResources()
     {
         return learningResourceRepository.findAll();
     }
@@ -43,5 +42,13 @@ public class LearningResourceService {
             return profitMargin2.compareTo(profitMargin1);
         });
         return learningResources;
+    }
+
+    public void deleteLearningResourceById(int learningResourceId) {
+        learningResourceRepository.deleteById(learningResourceId);
+    }
+
+    public Optional<LearningResource> getLearningResourcesById(int learningResourceId) {
+      return  learningResourceRepository.findById(learningResourceId);
     }
 }
