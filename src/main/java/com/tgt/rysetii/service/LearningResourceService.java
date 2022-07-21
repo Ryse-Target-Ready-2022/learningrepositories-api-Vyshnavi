@@ -48,7 +48,4 @@ public class LearningResourceService {
         learningResourceRepository.deleteById(learningResourceId);
     }
 
-    public Optional<LearningResource> getLearningResourcesById(int learningResourceId) {
-      return  learningResourceRepository.findById(learningResourceId);
-    }
 }
