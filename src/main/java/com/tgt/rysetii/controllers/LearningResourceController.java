@@ -23,11 +23,6 @@ public class LearningResourceController {
         return learningResourceService.getLearningResources();
     }
 
-    @GetMapping("/{learningResourceId}")
-    public Optional<LearningResource> getAllLearningResources(@PathVariable int learningResourceId)
-    {
-        return learningResourceService.getLearningResourcesById(learningResourceId);
-    }
 
     @PostMapping(value="/",consumes = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
