@@ -1,4 +1,4 @@
-package com.tgt.rysetii.entity;
+package com.tgt.rysetii.learningresourceapi.entity;
 
 public enum LearningResourceStatus {
     PLANNING,

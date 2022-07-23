@@ -1,10 +1,10 @@
-package com.tgt.rysetii.entity;
+package com.tgt.rysetii.learningresourceapi.entity;
 
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-@Component
+
 @Entity
 @Table(name="LEARNING_RESOURCE")
 public class LearningResource {

@@ -1,12 +1,11 @@
-package com.tgt.rysetii.controllers;
+package com.tgt.rysetii.learningresourceapi.controllers;
 
-import com.tgt.rysetii.entity.LearningResource;
-import com.tgt.rysetii.service.LearningResourceService;
+import com.tgt.rysetii.learningresourceapi.entity.LearningResource;
+import com.tgt.rysetii.learningresourceapi.service.LearningResourceService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/learningresources/v1")

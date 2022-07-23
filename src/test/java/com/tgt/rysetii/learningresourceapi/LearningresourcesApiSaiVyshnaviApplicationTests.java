@@ -1,4 +1,4 @@
-package com.tgt.rysetii;
+package com.tgt.rysetii.learningresourceapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
