@@ -1,11 +1,10 @@
-package com.tgt.rysetii.service;
+package com.tgt.rysetii.learningresourceapi.service;
 
-import com.tgt.rysetii.entity.LearningResource;
-import com.tgt.rysetii.repository.LearningResourceRepository;
+import com.tgt.rysetii.learningresourceapi.entity.LearningResource;
+import com.tgt.rysetii.learningresourceapi.repository.LearningResourceRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 import static java.util.stream.Collectors.toList;
 @Service

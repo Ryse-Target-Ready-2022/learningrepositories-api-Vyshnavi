@@ -1,21 +1,7 @@
-package com.tgt.rysetii;
+package com.tgt.rysetii.learningresourceapi;
 
-import com.tgt.rysetii.entity.LearningResource;
-import com.tgt.rysetii.repository.LearningResourceRepository;
-import com.tgt.rysetii.service.LearningResourceService;
-import org.apache.catalina.core.ApplicationContext;
-import org.apache.catalina.core.StandardContext;
-
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
-
-import static com.tgt.rysetii.entity.LearningResourceStatus.PUBLISHED;
 
 @SpringBootApplication
 public class LearningresourcesApiSaiVyshnaviApplication {
